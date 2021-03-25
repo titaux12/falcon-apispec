@@ -1,9 +1,13 @@
+import logging
+
 import falcon
 import pytest
 from apispec import APISpec
 from apispec.exceptions import APISpecError
 
 from falcon_apispec import FalconPlugin
+
+logging.basicConfig(level="DEBUG")
 
 
 @pytest.fixture()

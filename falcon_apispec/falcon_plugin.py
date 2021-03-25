@@ -86,4 +86,4 @@ def _node_without_resource(node) -> bool:
     """Return if the falcon router's node is representing a valid falcon route"""
     # The 3 conditions seems to be overkilled because of the falcon's implementation:
     #  the assignation of these 3 attributes are tangled together in the trees construction
-    return node.method_map is not None and node.uri_template is not None and node.resource is not None
+    return node.method_map is None or node.uri_template is None or node.resource is None
